@@ -1,36 +1,36 @@
 # Sentiment-Distribution-in-Tweets 
 **Sentiment Analysis with NLTK**
 
-**Overview**
+# Overview
 
 This code performs sentiment analysis on a given dataset of tweets using the Natural Language Toolkit (NLTK) library. The sentiment of each tweet is determined using the VADER (Valence Aware Dictionary and sEntiment Reasoner) sentiment analysis tool. The results are then visualized using a pie chart to display the distribution of sentiments in the dataset.
 
-**Prerequisites**
+# Prerequisites
 Before running the code, make sure to install the necessary library:
 
 import nltk
 nltk.download('vader_lexicon')
 
-**Usage**
+# Usage
 
 1-Replace the sample dataset (data) with your actual dataset.
 2-Ensure that the required libraries are installed.
 3-Run the code to perform sentiment analysis and visualize the results.
 
-**Code Explanation**
+# Code Explanation
 
-Import Libraries:
+## Import Libraries:
 nltk: Natural Language Toolkit library.
 pandas: Data manipulation library.
 matplotlib.pyplot: Plotting library for data visualization.
 
-import nltk
+## import nltk
 nltk.download('vader_lexicon')
 from nltk.sentiment import SentimentIntensityAnalyzer
 import pandas as pd
 import matplotlib.pyplot as plt
 
-Sample Dataset:
+## Sample Dataset:
 Replace the 'Tweet' values in the data dictionary with your actual dataset.
 
  data = {
@@ -43,7 +43,7 @@ Replace the 'Tweet' values in the data dictionary with your actual dataset.
 
  df = pd.DataFrame(data)
 
-Sentiment Analysis:
+## Sentiment Analysis:
 
 Initialize the sentiment analyzer (sia).
 Apply sentiment analysis to each tweet and create a new column ('Sentiment_Score') in the DataFrame.
@@ -51,7 +51,7 @@ Apply sentiment analysis to each tweet and create a new column ('Sentiment_Score
 sia = SentimentIntensityAnalyzer()
 df['Sentiment_Score'] = df['Tweet'].apply(lambda x: sia.polarity_scores(x)['compound'])
 
-Sentiment Classification:
+## Sentiment Classification:
 Classify sentiments based on the sentiment score:
 'Positive' if score >= 0.05
 'Negative' if score <= -0.05
@@ -61,12 +61,12 @@ df['Sentiment'] = df['Sentiment_Score'].apply(
     lambda score: 'Positive' if score >= 0.05 else ('Negative' if score <= -0.05 else 'Neutral')
 )
 
-Display the DataFrame:
+## Display the DataFrame:
 Print the DataFrame with the added sentiment information.
 
 print(df)
 
-Visualization: Pie Chart:
+## Visualization: Pie Chart:
 Create a pie chart to visualize the distribution of sentiments in the dataset. 
 
 sentiment_counts = df['Sentiment'].value_counts()
