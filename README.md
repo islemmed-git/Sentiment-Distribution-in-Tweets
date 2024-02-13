@@ -1,7 +1,7 @@
 # Sentiment-Distribution-in-Tweets 
 **Sentiment Analysis with NLTK**
 
-# Overview
+# Overview :
 
 This code performs sentiment analysis on a given dataset of tweets using the Natural Language Toolkit (NLTK) library. The sentiment of each tweet is determined using the VADER (Valence Aware Dictionary and sEntiment Reasoner) sentiment analysis tool. The results are then visualized using a pie chart to display the distribution of sentiments in the dataset.
 
@@ -11,7 +11,7 @@ Before running the code, make sure to install the necessary library:
 import nltk
 nltk.download('vader_lexicon')
 
-# Usage 
+# Usage :
 
 1-Replace the sample dataset (data) with your actual dataset.
 2-Ensure that the required libraries are installed.
