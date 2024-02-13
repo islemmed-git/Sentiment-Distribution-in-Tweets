@@ -17,9 +17,9 @@ nltk.download('vader_lexicon')
 2-Ensure that the required libraries are installed.
 3-Run the code to perform sentiment analysis and visualize the results.
 
-# Code Explanation
+# Code Explanation :
 
-## Import Libraries:
+## Import Libraries
 nltk: Natural Language Toolkit library.
 pandas: Data manipulation library.
 matplotlib.pyplot: Plotting library for data visualization.
