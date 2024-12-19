@@ -61,6 +61,10 @@ df['Sentiment'] = df['Sentiment_Score'].apply(
     lambda score: 'Positive' if score >= 0.05 else ('Negative' if score <= -0.05 else 'Neutral')
 )
 
+![Capture d'écran 2024-12-19 023908](https://github.com/user-attachments/assets/5eb8269a-b52c-48b1-b033-a155b0bc4029)
+
+
+
 ## Display the DataFrame:
 Print the DataFrame with the added sentiment information.
 
